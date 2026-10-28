@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM-02 | JavaScript Fundamentals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">PM-02 • JavaScript Programme</p>
+      <h1>Support Ticket Priority Checker</h1>
+      <p>Practise variables, operators, conditions, functions, arrays and loops.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Ticket details</h2>
+      <form id="ticketForm">
+        <label for="ticketTitle">Ticket description</label>
+        <input id="ticketTitle" required placeholder="e.g. Network is unavailable">
+        <div class="grid">
+          <div>
+            <label for="category">Issue category</label>
+            <select id="category" required>
+              <option value="">Choose a category</option>
+              <option value="password">Password</option>
+              <option value="network">Network</option>
+              <option value="hardware">Hardware</option>
+              <option value="software">Software</option>
+              <option value="general">General support</option>
+            </select>
+          </div>
+          <div>
+            <label for="days">Days waiting</label>
+            <input id="days" type="number" min="0" value="0" required>
+          </div>
+        </div>
+        <button type="submit">Check priority</button>
+      </form>
+      <p id="result" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Task list (array and loop example)</h2>
+      <p>These tasks are displayed using a JavaScript loop.</p>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Example calculations</h2>
+      <p id="calculation"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
